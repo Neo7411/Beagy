@@ -3,10 +3,6 @@ kor ivek osszesen 10 m
 sav szelesseg 40cm 
 5cm sav jelolok
 
-
-
-
-
-
-
-
+//Plusz info 
+//3M szalag méret: 5cm
+//Autó távolság a kanyar középpontjától: 170cm
