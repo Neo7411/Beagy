@@ -4,7 +4,7 @@ from time import sleep
 
 sense = SenseHat()
 
-o = (0,0,0) #no color
+o = (0,9,0) #no color
 b = (0,0,255)
 
 one_img = [o,o,o,o,o,o,o,o,
