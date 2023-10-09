@@ -1,8 +1,7 @@
 from sense_hat import SenseHat
 import matplotlib.pyplot as plt
 import time
-import math 
-
+import math
 
 calibration = True
 
@@ -65,7 +64,7 @@ def main():
         magnet = sense.get_compass_raw()
         x = magnet['x']
         y = magnet['y']
-        file.wtite(str(x) + ',' + str(y) + '\n')
+        file.write(str(x) + ',' + str(y) + '\n')
         
     file.close()
     xmax, xmin, ymax, ymin = plot(filename)
