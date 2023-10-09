@@ -90,12 +90,21 @@ def main():
         
         if deg < 45 or deg > 315:
             sense.show_letter('N')
-        elif deg < 135:
+        elif deg < 67.5:
+            sense.show_letter('NE')
+        elif deg < 112.5:
             sense.show_letter('E')
-        elif deg < 225:
+        elif deg < 157.5:
+            sense.show_letter('SE')
+        elif deg < 202.5:
             sense.show_letter('S')
-        else:
+        elif deg < 247.5:
+            sense.show_letter('SW')
+        elif deg < 292.5:
             sense.show_letter('W')
+        else:
+            sense.show_letter('NW')      
+    
         time.sleep(0.2)
         sense.clear()
 main()
