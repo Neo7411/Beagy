@@ -73,12 +73,18 @@ def button_event(event):
         else:   
             state = 3
 
-def reset_event(event):
+
+def sync_event(event):
     global state
-    if event.action == 'released':
-        sense.clear()
-        time.sleep(2)
-        state = 0
+    act_state=state
+    if event.action == 'pressed':
+       while True:
+         time.sleep(1)
+         if sense.stick.direction_up.action=='released':
+            state=act_state
+            break
+    
+  
 
 
 
@@ -109,7 +115,7 @@ def state_control(state):
 def main():
     global state
     sense.stick.direction_middle = button_event
-    sense.stick.direction_up = reset_event
+    sense.stick.direction_up = sync_event
     while True:
         state_control(state)
         set_state()
